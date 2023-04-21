@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+/* basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  --primary-color: #60a5fa; /* variable or custom properties */
+}
+
+h1 {
+  font-size: 1.25rem;
+}
+
+h2 {
+  font-size: 1.1rem;
+}
+
+main {
+  flex-grow: 1;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  background-color: #f3f6fc;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  padding: 18px 0;
+  border-bottom: 1px solid gray;
+}
+
+.navbar > .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container {
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.hero-section .container {
+  /* background-image: url("images/hero-bg.jpg");  */
+  /* if the background image resolution is not good there will be image repeat, that why we should use bg-repeat */
+  /* background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; */
+  /* background: url("images/hero-bg.jpg") no-repeat center/cover;
+  background-image: linear-gradient(to right, #064acb, #366ed8,transparent ); */
+  background: linear-gradient(to bottom, rgb(248, 210, 217), transparent),
+    url("images/hero-bg.jpg") no-repeat center/cover;
+  height: 240px;
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.greeting-text {
+  color: white;
+  font-size: 2rem;
+}
+
+.nav-item {
+  display: none;
+  gap: 36px;
+}
+
+.nav-item li {
+  list-style: none;
+}
+
+.nav-link {
+  color: #333;
+}
+
+/* psuedo class selector */
+.nav-link:hover {
+  color: var(--primary-color);
+}
+
+.btn {
+  font-size: 1rem;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+}
+
+.btn:hover {
+  box-shadow: 2px 2px 5px #ccc;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #3567a4;
+}
+
+.btn-secondary {
+  background-color: white;
+  border: 1px solid var(--primary-color);
+}
+
+.btn-secondary:hover {
+  color: white;
+  background-color: var(--primary-color);
+}
+
+.popular-section {
+  margin-top: 24px;
+}
+
+.popular-section .title {
+  text-align: center;
+  font-weight: 600;
+}
+
+.popular-section .card-container {
+  margin-top: 24px;
+}
+
+.card-container {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  width: 320px;
+  border-radius: 6px;
+  background-color: #fff;
+  box-shadow: 1px 1px 3px grey;
+}
+
+.card img {
+  height: 200px;
+  width: 100%;
+}
+
+.card .card-body {
+  margin-top: 24px;
+  padding: 0 16px;
+}
+
+.card .card-footer {
+  padding: 24px 16px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+footer .container {
+  font-size: 0.8rem;
+  padding: 24px 1rem;
+  margin-top: 36px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid grey;
+}
+
+footer ul {
+  display: flex;
+  gap: 36px;
+}
+
+footer ul li {
+  list-style: none;
+}
+
+@media (width >= 640px) {
+  html {
+    font-size: 20px;
+  }
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .hero-section .container {
+    height: 320px;
+  }
+  .nav-item {
+    display: flex;
+  }
+}
+/* @media sm
+ {
+  html{
+    font-size: 20px;
+  }
+  .hero-section .container{
+    width: 320px;
+  }
+  .nav-item {
+    display: flex;
+  }
+} */
+
+@media (width >= 768px) {
+  .card {
+    width: 300px;
+  }
+}
+/* change screen apparances color mode */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #333;
+    color: white;
+  }
+  .card {
+    background-color: inherit;
+  }
+}
