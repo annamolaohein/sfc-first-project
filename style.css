@@ -42,7 +42,8 @@ body {
   border-bottom: 1px solid gray;
 }
 
-.navbar .container {
+/* direct child selector */
+.navbar > .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -97,6 +98,7 @@ body {
 .nav-link:hover {
   color: var(--primary-color);
 }
+
 
 .btn {
   font-size: 1rem;
